@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+void copy(char a[]);
+
+void main()
+{
+    char a[50];
+    scanf("%s",a);
+    copy(a);
+}
+
+void copy(char *p)
+{
+    int i=0,j;
+    char *q = p;
+    while(*q!='\0')
+    {
+        i++;
+        q++;
+    }
+    printf("%d \n",i);
+    char b[i+1];
+    for(j=0;j<i+1;j++)
+    {
+        b[j]=*p;
+        p++;
+    }
+    puts(b);
+}
